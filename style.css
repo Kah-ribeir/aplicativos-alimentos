@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCF0D5;
+}
+
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FCF0D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#splash img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#formulario {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 100px;
+    border: 5px #B03112 solid;
+    background-color: #B03112;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+
+.foradoformulario {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elementos {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px #B03112 solid;
+    border-radius: 100px;
+    background-color: #B03112;
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+}
+
+.elementos legend,
+label {
+    font-size: 20px;
+}
+
+#formIngredientes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#formIngredientes legend {
+    text-align: center;
+    padding-top: 3em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.separação {
+    display: flex;
+    gap: 20px;
+
+}
+
+.receita {
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #B03217;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+.container .botao{
+    background-color: #B03217;
+}
+
+.container .botao a{
+    color: white;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ingredientes</title>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    select {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>O que você tem na sua geladeira?</h2>
+  <form id="formIngredientes">
+    
+    <fieldset>
+      <legend>Verduras</legend>
+      <select id="verduras" name="verduras" multiple size="5">
+        <option value="alface">Alface</option>
+        <option value="rúcula">Rúcula</option>
+        <option value="espinafre">Espinafre</option>
+        <option value="couve">Couve</option>
+        <option value="agrião">Agrião</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Legumes</legend>
+      <select id="legumes" name="legumes" multiple size="6">
+        <option value="cenoura">Cenoura</option>
+        <option value="batata">Batata</option>
+        <option value="abobrinha">Abobrinha</option>
+        <option value="berinjela">Berinjela</option>
+        <option value="beterraba">Beterraba</option>
+        <option value="chuchu">Chuchu</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Carnes e Proteínas</legend>
+      <select id="carnes" name="carnes" multiple size="6">
+        <option value="frango">Frango</option>
+        <option value="carne bovina">Carne bovina</option>
+        <option value="carne suína">Carne suína</option>
+        <option value="ovo">Ovo</option>
+        <option value="tofu">Tofu</option>
+        <option value="peixe">Peixe</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Cereais e Farináceos</legend>
+      <select id="cereais" name="cereais" multiple size="6">
+        <option value="arroz">Arroz</option>
+        <option value="macarrão">Macarrão</option>
+        <option value="farinha de trigo">Farinha de trigo</option>
+        <option value="aveia">Aveia</option>
+        <option value="pão">Pão</option>
+        <option value="milho">Milho</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Laticínios e Derivados</legend>
+      <select id="laticinios" name="laticinios" multiple size="5">
+        <option value="leite">Leite</option>
+        <option value="queijo">Queijo</option>
+        <option value="manteiga">Manteiga</option>
+        <option value="requeijão">Requeijão</option>
+        <option value="iogurte">Iogurte</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Temperos e Especiarias</legend>
+      <select id="temperos" name="temperos" multiple size="8">
+        <option value="sal">Sal</option>
+        <option value="pimenta">Pimenta</option>
+        <option value="alho">Alho</option>
+        <option value="cebola">Cebola</option>
+        <option value="orégano">Orégano</option>
+        <option value="salsinha">Salsinha</option>
+        <option value="coentro">Coentro</option>
+        <option value="colorau">Colorau</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Outros Itens</legend>
+      <select id="outros" name="outros" multiple size="7">
+        <option value="azeite">Azeite</option>
+        <option value="óleo">Óleo</option>
+        <option value="vinagre">Vinagre</option>
+        <option value="extrato de tomate">Extrato de tomate</option>
+        <option value="molho shoyu">Molho Shoyu</option>
+        <option value="leite condensado">Leite condensado</option>
+        <option value="creme de leite">Creme de leite</option>
+      </select>
+    </fieldset>
+
+    <br />
+    <button type="submit">Buscar receitas</button>
+  </form>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#legumes, #verduras, #carnes, #cereais, #laticinios, #temperos, #outros').select2({
+        width: '100%',
+        placeholder: 'Selecione'
+      });
+
+      $('#formIngredientes').on('submit', function (e) {
+        e.preventDefault();
+
+        const legumes = $('#legumes').val() || [];
+        const verduras = $('#verduras').val() || [];
+        const carnes = $('#carnes').val() || [];
+        const cereais = $('#cereais').val() || [];
+        const laticinios = $('#laticinios').val() || [];
+        const temperos = $('#temperos').val() || [];
+        const outros = $('#outros').val() || [];
+
+        const selecionados = [...legumes, ...verduras, ...carnes, ...cereais, ...laticinios, ...temperos, ...outros];
+
+        localStorage.setItem('ingredientesSelecionados', JSON.stringify(selecionados));
+
+        window.location.href = 'receitas.html';
+      });
+    });
+  </script>
+</body>
+</html>
