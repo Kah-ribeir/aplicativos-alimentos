@@ -167,11 +167,11 @@
     ${isFavorita ? 'Salva ✅' : 'Salvar como favorita'}
   </button>
 `;
-const btn = card.querySelector('.favorita-btn');
-btn.addEventListener('click', () => {
-  const receita = JSON.parse(btn.dataset.receita);
-  salvarComoFavorita(receita);
-});
+            const btn = card.querySelector('.favorita-btn');
+            btn.addEventListener('click', () => {
+              const receita = JSON.parse(btn.dataset.receita);
+              salvarComoFavorita(receita);
+            });
 
 
             resultadoDiv.appendChild(card);
@@ -186,21 +186,21 @@ btn.addEventListener('click', () => {
     filtrarReceitas();
 
     function salvarComoFavorita(receita) {
-  const favoritas = JSON.parse(localStorage.getItem('receitasFavoritas')) || [];
-  const existe = favoritas.find(r => r.nome === receita.nome);
+      const favoritas = JSON.parse(localStorage.getItem('receitasFavoritas')) || [];
+      const existe = favoritas.find(r => r.nome === receita.nome);
 
-  if (!existe) {
-    favoritas.push(receita);
-    localStorage.setItem('receitasFavoritas', JSON.stringify(favoritas));
-    alert(`Receita "${receita.nome}" salva como favorita!`);
-    filtrarReceitas(); // Atualiza os botões
-  }
-}
+      if (!existe) {
+        favoritas.push(receita);
+        localStorage.setItem('receitasFavoritas', JSON.stringify(favoritas));
+        alert(`Receita "${receita.nome}" salva como favorita!`);
+        filtrarReceitas(); // Atualiza os botões
+      }
+    }
 
-function verificarFavorita(nome) {
-  const favoritas = JSON.parse(localStorage.getItem('receitasFavoritas')) || [];
-  return favoritas.some(r => r.nome === nome);
-}
+    function verificarFavorita(nome) {
+      const favoritas = JSON.parse(localStorage.getItem('receitasFavoritas')) || [];
+      return favoritas.some(r => r.nome === nome);
+    }
 
   </script>
 </body>

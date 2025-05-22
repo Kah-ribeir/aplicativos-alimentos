@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Mio Grado - Meu Plano</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      display: flex;
+      background-color: #f8f6f2;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #5a3a2c;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      height: 100%;
+      padding: 20px;
+      transition: left 0.3s;
+      z-index: 1000;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Botão de abrir sidebar */
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #5a3a2c;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .menu-btn:hover {
+      background-color: #7b4e3c;
+    }
+
+    /* Conteúdo Principal */
+    .content {
+      margin-left: 0;
+      padding: 40px;
+      width: 100%;
+      transition: margin-left 0.3s;
+    }
+
+    .sidebar.active ~ .content {
+      margin-left: 250px;
+    }
+
+    /* Área dos Planos */
+    .planos {
+      display: none;
+    }
+
+    .plano-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .plano {
+      background-color: #fff;
+      border: 2px solid #5a3a2c;
+      padding: 20px;
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .plano h3 {
+      color: #5a3a2c;
+    }
+
+    .plano.super {
+      background-color: #5a3a2c;
+      color: white;
+    }
+
+    .plano.super h3 {
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #5a3a2c;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão Menu -->
+  <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <a href="#" onclick="mostrarConteudo('inicio')">Início</a>
+    <a href="#" onclick="mostrarConteudo('meuPlano')">Meu Plano</a>
+    <a href="#">Receitas</a>
+    <a href="#">Sobre</a>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="content">
+    <!-- Página inicial -->
+    <div id="inicio">
+      <h1>Bem-vindo ao Il Mio Grado!</h1>
+      <p>Escolha uma opção no menu lateral.</p>
+    </div>
+
+    <!-- Área dos Planos -->
+    <div id="areaPlanos" class="planos">
+      <h1>Planos Premium</h1>
+      <div class="plano-container">
+        <div class="plano">
+          <h3>Básico</h3>
+          <p>✔️ Acesso às receitas básicas</p>
+          <p>❌ Possui anúncios</p>
+          <p><strong>Gratuito</strong></p>
+        </div>
+
+        <div class="plano">
+          <h3>Intermediário</h3>
+          <p>✔️ Mais receitas</p>
+          <p>✔️ Sem anúncios</p>
+          <p><strong>R$ 9,90/mês</strong></p>
+        </div>
+
+        <div class="plano super">
+          <h3>Super</h3>
+          <p>✔️ Todas as receitas</p>
+          <p>✔️ Sem anúncios</p>
+          <p>✔️ Compartilha com até 4 pessoas</p>
+          <p>✔️ Prêmios e descontos</p>
+          <p><strong>R$ 19,90/mês ou R$ 199,00/ano</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Toggle Sidebar
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+
+    // Mostrar Conteúdo
+    function mostrarConteudo(secao) {
+      const inicio = document.getElementById('inicio');
+      const areaPlanos = document.getElementById('areaPlanos');
+
+      if (secao === 'meuPlano') {
+        inicio.style.display = 'none';
+        areaPlanos.style.display = 'block';
+      } else if (secao === 'inicio') {
+        inicio.style.display = 'block';
+        areaPlanos.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>

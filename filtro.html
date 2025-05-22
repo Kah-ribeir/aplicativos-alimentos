@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ingredientes</title>
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -72,6 +73,7 @@
     }
   </style>
 </head>
+
 <body>
   <h2>O que você tem na sua geladeira?</h2>
   <form id="formIngredientes">
@@ -228,21 +230,51 @@
     <button type="submit">Buscar receitas</button>
   </form>
 
+  <div id="splash">
+    <div class="user-icon" id="user-icon" onclick="abrirConta()">👤</div>
 
-  <div class="user-icon" onclick="abrirConta()">👤</div>
+    <div id="contaUsuario" class="painel-conta">
+      <button class="fechar-conta" onclick="fecharConta()">×</button>
+      <h3>Minha Conta</h3>
+      <p><strong>Nome:</strong> <span id="nomeConta"></span></p>
+      <p><strong>Email:</strong> <span id="emailConta"></span></p>
+      <hr>
+      <ul>
+        <li><a href="#">Minhas receitas</a></li>
+        <li><a href="favoritos.html">Favoritos</a></li>
+        <li><a href="#" onclick="mostrarPlanos()"> Meu plano</a></li>
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#" onclick="logout()">Sair</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="foradoformulario" class="foradoformulario">
+    <div id="formulario">
+      <h1>PLANOS:</h1>
+      <form id="form-nome">
+        <div class="plano">
+          <h1>GRATUITO</h1>
+          <p>Acesso às receitas básicas + anúncios</p>
+        </div>
 
-<div id="contaUsuario" class="painel-conta">
-  <button class="fechar-conta" onclick="fecharConta()">×</button>
-  <h3>Minha Conta</h3>
-  <p><strong>Nome:</strong> <span id="nomeConta"></span></p>
-  <p><strong>Email:</strong> <span id="emailConta"></span></p>
-  <hr>
-  <ul>
-    <li><a href="#">Minhas receitas</a></li>
-    <li><a href="favoritos.html">Favoritos</a></li>
-    <li><a href="#" onclick="logout()">Sair</a></li>
-  </ul>
-</div>
+        <div class="plano">
+          <h1>PREMIUM</h1>
+          <p>Sem anúncios + mais receitas</p>
+          <h3>R$ 9,90/mês</h3>
+        </div>
+
+        <div class="plano">
+          <h1>SUPER PREMIUM</h1>
+          <p>Sem anúncios, mais receitas, sem vídeos obrigatórios, pode compartilhar o acesso com até 4 membros da
+            família, ganha prêmios e descontos mensais</p>
+          <h3>R$ 19,90/mês ou R$ 199,00/ano</h3>
+        </div>
+
+
+    </div>
+  </div>
+
+
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -291,30 +323,39 @@
       });
     });
     function abrirConta() {
-  document.getElementById('contaUsuario').classList.add('aberto');
+      document.getElementById('contaUsuario').classList.add('aberto');
+      document.getElementById('user-icon').classList.remove('user-icon');
 
-  // Preenche os dados do usuário
-  const nome = localStorage.getItem('usuario_nome') || 'Usuário';
-  const email = localStorage.getItem('usuario_email') || 'sem@email.com';
+      // Preenche os dados do usuário
+      const nome = localStorage.getItem('usuario_nome') || 'Usuário';
+      const email = localStorage.getItem('usuario_email') || 'sem@email.com';
 
-  document.getElementById('nomeConta').innerText = nome;
-  document.getElementById('emailConta').innerText = email;
-}
+      document.getElementById('nomeConta').innerText = nome;
+      document.getElementById('emailConta').innerText = email;
+    }
 
-function fecharConta() {
-  document.getElementById('contaUsuario').classList.remove('aberto');
-}
+    function fecharConta() {
+      document.getElementById('contaUsuario').classList.remove('aberto');
+      document.getElementById('user-icon').classList.add('user-icon');
+    }
 
-function logout() {
-  localStorage.removeItem('usuario_nome');
-  localStorage.removeItem('usuario_email');
-  alert('Você saiu da conta.');
-  location.reload(); // Atualiza a página
-}
+    function logout() {
+      localStorage.removeItem('usuario_nome');
+      localStorage.removeItem('usuario_email');
+      alert('Você saiu da conta.');
+      location.reload(); // Atualiza a página
+    }
+
+    function mostrarPlanos() {
+      
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('formIngredientes').style.display = 'none';
+      document.getElementById('foradoformulario').style.display = 'block';
+    }
 
   </script>
-  
+
 
 </body>
-</html>
 
+</html>

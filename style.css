@@ -10,7 +10,7 @@ body {
 
 #splash {
     position: fixed;
-    top: 0;
+   
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -26,17 +26,12 @@ body {
     max-height: 80%;
 }
 
-#formulario {
-    display: none;
-    padding: 20px;
-    text-align: center;
-    border-radius: 100px;
-    border: 5px #D35427 solid;
-    background-color: #D35427;
-    max-width: 300px;
-    margin: 0 auto;
+#formulario{
+  background-color: #974a4a;
+  border: #974a4a;
+  border-radius: 10px;
+  padding: 50px;
 }
-
 
 .foradoformulario {
     height: 100vh;
@@ -164,4 +159,49 @@ h2 {
   color: #3498db;
   text-decoration: none;
   font-weight: bold;
+}
+
+.plano-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.plano {
+  background-color: #fff;
+  border: 2px solid #5a3a2c;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.plano h3 {
+  color: #5a3a2c;
+}
+
+.plano.super {
+  background-color: #5a3a2c;
+  color: white;
+}
+
+button {
+  background-color: #5a3a2c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #7b4e3c;
+}
+
+
+#foradoformulario{
+  display: none;
 }
