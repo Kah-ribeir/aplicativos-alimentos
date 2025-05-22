@@ -1,268 +1,544 @@
 [
-    {
-      "nome": "Salada de Alface com Cenoura",
-      "ingredientes": ["alface", "cenoura"],
-      "modo_preparo": "Lave bem os ingredientes, rale a cenoura e misture com as folhas de alface. Tempere a gosto.",
-      "tempo_preparo": "10 minutos"
-    },
-    {
-      "nome": "Sopa de Batata com Couve",
-      "ingredientes": ["batata", "couve"],
-      "modo_preparo": "Cozinhe as batatas até ficarem macias. Adicione a couve picada e cozinhe por mais 5 minutos. Tempere com sal e pimenta.",
-      "tempo_preparo": "30 minutos"
-    },
-    {
-      "nome": "Arroz com Ovo e Espinafre",
-      "ingredientes": ["arroz", "ovo", "espinafre"],
-      "modo_preparo": "Cozinhe o arroz normalmente. Refogue os ovos mexidos com espinafre picado e misture ao arroz.",
-      "tempo_preparo": "25 minutos"
-    },
-    {
-      "nome": "Abobrinha Recheada com Queijo",
-      "ingredientes": ["abobrinha", "queijo"],
-      "modo_preparo": "Corte a abobrinha ao meio, retire o miolo e recheie com queijo. Leve ao forno até dourar.",
-      "tempo_preparo": "35 minutos"
-    },
-    {
-        "nome": "Omelete com Espinafre e Queijo",
-        "ingredientes": ["ovo", "espinafre", "queijo"],
-        "modo_preparo": "Bata os ovos, adicione espinafre picado e queijo ralado. Cozinhe em uma frigideira antiaderente até dourar.",
-        "tempo_preparo": "15 minutos"
-      },
-      {
-        "nome": "Arroz à Grega",
-        "ingredientes": ["arroz", "cenoura", "ervilha"],
-        "modo_preparo": "Cozinhe o arroz com cenoura ralada e ervilhas. Tempere a gosto.",
-        "tempo_preparo": "25 minutos"
-      },
-      {
-        "nome": "Batata Assada com Queijo",
-        "ingredientes": ["batata", "queijo"],
-        "modo_preparo": "Corte as batatas em rodelas, adicione queijo por cima e leve ao forno até gratinar.",
-        "tempo_preparo": "40 minutos"
-      },
-      {
-        "nome": "Sopa de Abobrinha e Cenoura",
-        "ingredientes": ["abobrinha", "cenoura"],
-        "modo_preparo": "Cozinhe abobrinha e cenoura picadas até ficarem macias. Bata no liquidificador e volte à panela. Tempere e sirva quente.",
-        "tempo_preparo": "30 minutos"
-      },
-      {
-        "nome": "Refogado de Couve com Alho",
-        "ingredientes": ["couve"],
-        "modo_preparo": "Pique a couve e refogue com alho em uma frigideira. Tempere com sal.",
-        "tempo_preparo": "10 minutos"
-      },
-      {
-        "nome": "Panqueca de Alface com Ovo",
-        "ingredientes": ["alface", "ovo"],
-        "modo_preparo": "Bata ovos com alface picada e prepare como panquecas em uma frigideira.",
-        "tempo_preparo": "20 minutos"
-      },
-      {
-        "nome": "Arroz Colorido com Legumes",
-        "ingredientes": ["arroz", "cenoura", "abobrinha"],
-        "modo_preparo": "Cozinhe arroz com cenoura e abobrinha picadas. Acrescente temperos a gosto.",
-        "tempo_preparo": "30 minutos"
-      },
-      {
-        "nome": "Cenoura Glaceada",
-        "ingredientes": ["cenoura"],
-        "modo_preparo": "Cozinhe cenouras em rodelas com um pouco de manteiga e açúcar até ficarem brilhantes.",
-        "tempo_preparo": "20 minutos"
-      },
-      {
-        "nome": "Espinafre com Queijo ao Forno",
-        "ingredientes": ["espinafre", "queijo"],
-        "modo_preparo": "Refogue espinafre e coloque em uma travessa com queijo por cima. Leve ao forno até gratinar.",
-        "tempo_preparo": "25 minutos"
-      },
-      {
-        "nome": "Batata com Ovo Mexido",
-        "ingredientes": ["batata", "ovo"],
-        "modo_preparo": "Cozinhe batatas em cubos e depois misture com ovos mexidos. Tempere a gosto.",
-        "tempo_preparo": "30 minutos"
-      }
-      ,
-        {
-          "nome": "Salada de Alface com Cenoura",
-          "ingredientes": [
-            "alface",
-            "cenoura"
-          ],
-          "modo_preparo": "Lave bem os ingredientes, rale a cenoura e misture com as folhas de alface. Tempere a gosto.",
-          "tempo_preparo": "10 minutos"
-        },
-        {
-          "nome": "Sopa de Batata com Couve",
-          "ingredientes": [
-            "batata",
-            "couve"
-          ],
-          "modo_preparo": "Cozinhe as batatas até ficarem macias. Adicione a couve picada e cozinhe por mais 5 minutos. Tempere com sal e pimenta.",
-          "tempo_preparo": "30 minutos"
-        },
-        {
-          "nome": "Arroz com Ovo e Espinafre",
-          "ingredientes": [
-            "arroz",
-            "ovo",
-            "espinafre"
-          ],
-          "modo_preparo": "Cozinhe o arroz normalmente. Refogue os ovos mexidos com espinafre picado e misture ao arroz.",
-          "tempo_preparo": "25 minutos"
-        },
-        {
-          "nome": "Abobrinha Recheada com Queijo",
-          "ingredientes": [
-            "abobrinha",
-            "queijo"
-          ],
-          "modo_preparo": "Corte a abobrinha ao meio, retire o miolo e recheie com queijo. Leve ao forno até dourar.",
-          "tempo_preparo": "35 minutos"
-        },
-        {
-          "nome": "Omelete com Espinafre e Queijo",
-          "ingredientes": [
-            "ovo",
-            "espinafre",
-            "queijo"
-          ],
-          "modo_preparo": "Bata os ovos, adicione espinafre picado e queijo ralado. Cozinhe em uma frigideira antiaderente até dourar.",
-          "tempo_preparo": "15 minutos"
-        },
-        {
-          "nome": "Arroz à Grega",
-          "ingredientes": [
-            "arroz",
-            "cenoura",
-            "ervilha"
-          ],
-          "modo_preparo": "Cozinhe o arroz com cenoura ralada e ervilhas. Tempere a gosto.",
-          "tempo_preparo": "25 minutos"
-        },
-        {
-          "nome": "Batata Assada com Queijo",
-          "ingredientes": [
-            "batata",
-            "queijo"
-          ],
-          "modo_preparo": "Corte as batatas em rodelas, adicione queijo por cima e leve ao forno até gratinar.",
-          "tempo_preparo": "40 minutos"
-        },
-        {
-          "nome": "Sopa de Abobrinha e Cenoura",
-          "ingredientes": [
-            "abobrinha",
-            "cenoura"
-          ],
-          "modo_preparo": "Cozinhe abobrinha e cenoura picadas até ficarem macias. Bata no liquidificador e volte à panela. Tempere e sirva quente.",
-          "tempo_preparo": "30 minutos"
-        },
-        {
-          "nome": "Refogado de Couve com Alho",
-          "ingredientes": [
-            "couve"
-          ],
-          "modo_preparo": "Pique a couve e refogue com alho em uma frigideira. Tempere com sal.",
-          "tempo_preparo": "10 minutos"
-        },
-        {
-          "nome": "Panqueca de Alface com Ovo",
-          "ingredientes": [
-            "alface",
-            "ovo"
-          ],
-          "modo_preparo": "Bata ovos com alface picada e prepare como panquecas em uma frigideira.",
-          "tempo_preparo": "20 minutos"
-        },
-        {
-          "nome": "Arroz Colorido com Legumes",
-          "ingredientes": [
-            "arroz",
-            "cenoura",
-            "abobrinha"
-          ],
-          "modo_preparo": "Cozinhe arroz com cenoura e abobrinha picadas. Acrescente temperos a gosto.",
-          "tempo_preparo": "30 minutos"
-        },
-        {
-          "nome": "Cenoura Glaceada",
-          "ingredientes": [
-            "cenoura"
-          ],
-          "modo_preparo": "Cozinhe cenouras em rodelas com um pouco de manteiga e açúcar até ficarem brilhantes.",
-          "tempo_preparo": "20 minutos"
-        },
-        {
-          "nome": "Espinafre com Queijo ao Forno",
-          "ingredientes": [
-            "espinafre",
-            "queijo"
-          ],
-          "modo_preparo": "Refogue espinafre e coloque em uma travessa com queijo por cima. Leve ao forno até gratinar.",
-          "tempo_preparo": "25 minutos"
-        },
-        {
-          "nome": "Batata com Ovo Mexido",
-          "ingredientes": [
-            "batata",
-            "ovo"
-          ],
-          "modo_preparo": "Cozinhe batatas em cubos e depois misture com ovos mexidos. Tempere a gosto.",
-          "tempo_preparo": "30 minutos"
-        },
-        {
-          "nome": "Tofu Grelhado com Alho",
-          "ingredientes": [
-            "tofu",
-            "alho",
-            "azeite"
-          ],
-          "modo_preparo": "Fatie o tofu e grelhe com alho e azeite até dourar.",
-          "tempo_preparo": "15 minutos"
-        },
-        {
-          "nome": "Farofa de Couve",
-          "ingredientes": [
-            "couve",
-            "farinha de trigo",
-            "manteiga"
-          ],
-          "modo_preparo": "Refogue a couve na manteiga e adicione farinha aos poucos até dourar.",
-          "tempo_preparo": "20 minutos"
-        },
-        {
-          "nome": "Purê de Batata com Alho",
-          "ingredientes": [
-            "batata",
-            "alho",
-            "leite"
-          ],
-          "modo_preparo": "Cozinhe as batatas e o alho, amasse e misture com leite até formar um purê.",
-          "tempo_preparo": "30 minutos"
-        },
-        {
-          "nome": "Macarrão com Molho de Tomate",
-          "ingredientes": [
-            "macarrão",
-            "extrato de tomate",
-            "cebola",
-            "alho"
-          ],
-          "modo_preparo": "Cozinhe o macarrão e prepare um molho refogando cebola, alho e extrato de tomate.",
-          "tempo_preparo": "25 minutos"
-        },
-        {
-          "nome": "Pão com Ovo e Queijo",
-          "ingredientes": [
-            "pão",
-            "ovo",
-            "queijo"
-          ],
-          "modo_preparo": "Frite um ovo, coloque sobre o pão e adicione queijo. Leve ao forno até gratinar.",
-          "tempo_preparo": "15 minutos"
-        }
-    
-  ]
-  
+  {
+    "nome": "Salada de Alface com Cenoura",
+    "ingredientes": [
+      "alface",
+      "cenoura"
+    ],
+    "modo_preparo": "Lave bem os ingredientes, rale a cenoura e misture com as folhas de alface. Tempere a gosto.",
+    "tempo_preparo": "10 minutos"
+  },
+  {
+    "nome": "Sopa de Batata com Couve",
+    "ingredientes": [
+      "batata",
+      "couve"
+    ],
+    "modo_preparo": "Cozinhe as batatas até ficarem macias. Adicione a couve picada e cozinhe por mais 5 minutos. Tempere com sal e pimenta.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Arroz com Ovo e Espinafre",
+    "ingredientes": [
+      "arroz",
+      "ovo",
+      "espinafre"
+    ],
+    "modo_preparo": "Cozinhe o arroz normalmente. Refogue os ovos mexidos com espinafre picado e misture ao arroz.",
+    "tempo_preparo": "25 minutos"
+  },
+  {
+    "nome": "Abobrinha Recheada com Queijo",
+    "ingredientes": [
+      "abobrinha",
+      "queijo"
+    ],
+    "modo_preparo": "Corte a abobrinha ao meio, retire o miolo e recheie com queijo. Leve ao forno até dourar.",
+    "tempo_preparo": "35 minutos"
+  },
+  {
+    "nome": "Omelete com Espinafre e Queijo",
+    "ingredientes": [
+      "ovo",
+      "espinafre",
+      "queijo"
+    ],
+    "modo_preparo": "Bata os ovos, adicione espinafre picado e queijo ralado. Cozinhe em uma frigideira antiaderente até dourar.",
+    "tempo_preparo": "15 minutos"
+  },
+  {
+    "nome": "Arroz à Grega",
+    "ingredientes": [
+      "arroz",
+      "cenoura",
+      "ervilha"
+    ],
+    "modo_preparo": "Cozinhe o arroz com cenoura ralada e ervilhas. Tempere a gosto.",
+    "tempo_preparo": "25 minutos"
+  },
+  {
+    "nome": "Batata Assada com Queijo",
+    "ingredientes": [
+      "batata",
+      "queijo"
+    ],
+    "modo_preparo": "Corte as batatas em rodelas, adicione queijo por cima e leve ao forno até gratinar.",
+    "tempo_preparo": "40 minutos"
+  },
+  {
+    "nome": "Sopa de Abobrinha e Cenoura",
+    "ingredientes": [
+      "abobrinha",
+      "cenoura"
+    ],
+    "modo_preparo": "Cozinhe abobrinha e cenoura picadas até ficarem macias. Bata no liquidificador e volte à panela. Tempere e sirva quente.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Refogado de Couve com Alho",
+    "ingredientes": [
+      "couve"
+    ],
+    "modo_preparo": "Pique a couve e refogue com alho em uma frigideira. Tempere com sal.",
+    "tempo_preparo": "10 minutos"
+  },
+  {
+    "nome": "Panqueca de Alface com Ovo",
+    "ingredientes": [
+      "alface",
+      "ovo"
+    ],
+    "modo_preparo": "Bata ovos com alface picada e prepare como panquecas em uma frigideira.",
+    "tempo_preparo": "20 minutos"
+  },
+  {
+    "nome": "Arroz Colorido com Legumes",
+    "ingredientes": [
+      "arroz",
+      "cenoura",
+      "abobrinha"
+    ],
+    "modo_preparo": "Cozinhe arroz com cenoura e abobrinha picadas. Acrescente temperos a gosto.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Cenoura Glaceada",
+    "ingredientes": [
+      "cenoura"
+    ],
+    "modo_preparo": "Cozinhe cenouras em rodelas com um pouco de manteiga e açúcar até ficarem brilhantes.",
+    "tempo_preparo": "20 minutos"
+  },
+  {
+    "nome": "Espinafre com Queijo ao Forno",
+    "ingredientes": [
+      "espinafre",
+      "queijo"
+    ],
+    "modo_preparo": "Refogue espinafre e coloque em uma travessa com queijo por cima. Leve ao forno até gratinar.",
+    "tempo_preparo": "25 minutos"
+  },
+  {
+    "nome": "Batata com Ovo Mexido",
+    "ingredientes": [
+      "batata",
+      "ovo"
+    ],
+    "modo_preparo": "Cozinhe batatas em cubos e depois misture com ovos mexidos. Tempere a gosto.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Salada de Alface com Cenoura",
+    "ingredientes": [
+      "alface",
+      "cenoura"
+    ],
+    "modo_preparo": "Lave bem os ingredientes, rale a cenoura e misture com as folhas de alface. Tempere a gosto.",
+    "tempo_preparo": "10 minutos"
+  },
+  {
+    "nome": "Sopa de Batata com Couve",
+    "ingredientes": [
+      "batata",
+      "couve"
+    ],
+    "modo_preparo": "Cozinhe as batatas até ficarem macias. Adicione a couve picada e cozinhe por mais 5 minutos. Tempere com sal e pimenta.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Arroz com Ovo e Espinafre",
+    "ingredientes": [
+      "arroz",
+      "ovo",
+      "espinafre"
+    ],
+    "modo_preparo": "Cozinhe o arroz normalmente. Refogue os ovos mexidos com espinafre picado e misture ao arroz.",
+    "tempo_preparo": "25 minutos"
+  },
+  {
+    "nome": "Abobrinha Recheada com Queijo",
+    "ingredientes": [
+      "abobrinha",
+      "queijo"
+    ],
+    "modo_preparo": "Corte a abobrinha ao meio, retire o miolo e recheie com queijo. Leve ao forno até dourar.",
+    "tempo_preparo": "35 minutos"
+  },
+  {
+    "nome": "Omelete com Espinafre e Queijo",
+    "ingredientes": [
+      "ovo",
+      "espinafre",
+      "queijo"
+    ],
+    "modo_preparo": "Bata os ovos, adicione espinafre picado e queijo ralado. Cozinhe em uma frigideira antiaderente até dourar.",
+    "tempo_preparo": "15 minutos"
+  },
+  {
+    "nome": "Arroz à Grega",
+    "ingredientes": [
+      "arroz",
+      "cenoura",
+      "ervilha"
+    ],
+    "modo_preparo": "Cozinhe o arroz com cenoura ralada e ervilhas. Tempere a gosto.",
+    "tempo_preparo": "25 minutos"
+  },
+  {
+    "nome": "Batata Assada com Queijo",
+    "ingredientes": [
+      "batata",
+      "queijo"
+    ],
+    "modo_preparo": "Corte as batatas em rodelas, adicione queijo por cima e leve ao forno até gratinar.",
+    "tempo_preparo": "40 minutos"
+  },
+  {
+    "nome": "Sopa de Abobrinha e Cenoura",
+    "ingredientes": [
+      "abobrinha",
+      "cenoura"
+    ],
+    "modo_preparo": "Cozinhe abobrinha e cenoura picadas até ficarem macias. Bata no liquidificador e volte à panela. Tempere e sirva quente.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Refogado de Couve com Alho",
+    "ingredientes": [
+      "couve"
+    ],
+    "modo_preparo": "Pique a couve e refogue com alho em uma frigideira. Tempere com sal.",
+    "tempo_preparo": "10 minutos"
+  },
+  {
+    "nome": "Panqueca de Alface com Ovo",
+    "ingredientes": [
+      "alface",
+      "ovo"
+    ],
+    "modo_preparo": "Bata ovos com alface picada e prepare como panquecas em uma frigideira.",
+    "tempo_preparo": "20 minutos"
+  },
+  {
+    "nome": "Arroz Colorido com Legumes",
+    "ingredientes": [
+      "arroz",
+      "cenoura",
+      "abobrinha"
+    ],
+    "modo_preparo": "Cozinhe arroz com cenoura e abobrinha picadas. Acrescente temperos a gosto.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Cenoura Glaceada",
+    "ingredientes": [
+      "cenoura"
+    ],
+    "modo_preparo": "Cozinhe cenouras em rodelas com um pouco de manteiga e açúcar até ficarem brilhantes.",
+    "tempo_preparo": "20 minutos"
+  },
+  {
+    "nome": "Espinafre com Queijo ao Forno",
+    "ingredientes": [
+      "espinafre",
+      "queijo"
+    ],
+    "modo_preparo": "Refogue espinafre e coloque em uma travessa com queijo por cima. Leve ao forno até gratinar.",
+    "tempo_preparo": "25 minutos"
+  },
+  {
+    "nome": "Batata com Ovo Mexido",
+    "ingredientes": [
+      "batata",
+      "ovo"
+    ],
+    "modo_preparo": "Cozinhe batatas em cubos e depois misture com ovos mexidos. Tempere a gosto.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Tofu Grelhado com Alho",
+    "ingredientes": [
+      "tofu",
+      "alho",
+      "azeite"
+    ],
+    "modo_preparo": "Fatie o tofu e grelhe com alho e azeite até dourar.",
+    "tempo_preparo": "15 minutos"
+  },
+  {
+    "nome": "Farofa de Couve",
+    "ingredientes": [
+      "couve",
+      "farinha de trigo",
+      "manteiga"
+    ],
+    "modo_preparo": "Refogue a couve na manteiga e adicione farinha aos poucos até dourar.",
+    "tempo_preparo": "20 minutos"
+  },
+  {
+    "nome": "Purê de Batata com Alho",
+    "ingredientes": [
+      "batata",
+      "alho",
+      "leite"
+    ],
+    "modo_preparo": "Cozinhe as batatas e o alho, amasse e misture com leite até formar um purê.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Macarrão com Molho de Tomate",
+    "ingredientes": [
+      "macarrão",
+      "extrato de tomate",
+      "cebola",
+      "alho"
+    ],
+    "modo_preparo": "Cozinhe o macarrão e prepare um molho refogando cebola, alho e extrato de tomate.",
+    "tempo_preparo": "25 minutos"
+  },
+  {
+    "nome": "Pão com Ovo e Queijo",
+    "ingredientes": [
+      "pão",
+      "ovo",
+      "queijo"
+    ],
+    "modo_preparo": "Frite um ovo, coloque sobre o pão e adicione queijo. Leve ao forno até gratinar.",
+    "tempo_preparo": "15 minutos"
+  },
+  {
+    "nome": "Frango Assado com Legumes",
+    "ingredientes": [
+      "frango",
+      "cenoura",
+      "batata",
+      "abobrinha",
+      "chuchu"
+    ],
+    "modo_preparo": "Tempere o frango com alho, sal, limão e ervas. Corte os legumes em pedaços e coloque tudo em uma assadeira. Regue com azeite e leve ao forno por 50 minutos a 200°C.",
+    "tempo_preparo": "50 minutos"
+  },
+  {
+    "nome": "Carne de Panela com Legumes",
+    "ingredientes": [
+      "carne bovina",
+      "batata",
+      "cenoura",
+      "chuchu",
+      "abobrinha"
+    ],
+    "modo_preparo": "Cozinhe a carne na panela de pressão com temperos. Após 20 minutos, adicione os legumes picados e cozinhe por mais 10 minutos.",
+    "tempo_preparo": "40 minutos"
+  },
+  {
+    "nome": "Berinjela Recheada com Tofu e Legumes",
+    "ingredientes": [
+      "berinjela",
+      "tofu",
+      "cenoura",
+      "abobrinha"
+    ],
+    "modo_preparo": "Corte a berinjela ao meio e retire parte do miolo. Refogue o tofu com os legumes e recheie as metades. Leve ao forno por 30 minutos.",
+    "tempo_preparo": "40 minutos"
+  },
+  {
+    "nome": "Omelete Colorida",
+    "ingredientes": [
+      "ovo",
+      "cenoura",
+      "abobrinha",
+      "chuchu"
+    ],
+    "modo_preparo": "Bata os ovos e misture os legumes ralados. Tempere e frite em uma frigideira antiaderente.",
+    "tempo_preparo": "15 minutos"
+  },
+  {
+    "nome": "Peixe Assado com Legumes",
+    "ingredientes": [
+      "peixe",
+      "batata",
+      "cenoura",
+      "chuchu"
+    ],
+    "modo_preparo": "Tempere o peixe com limão, alho e sal. Monte em um refratário com os legumes e regue com azeite. Asse por 40 minutos.",
+    "tempo_preparo": "45 minutos"
+  },
+  {
+    "nome": "Tofu Grelhado com Legumes Salteados",
+    "ingredientes": [
+      "tofu",
+      "abobrinha",
+      "berinjela",
+      "cenoura"
+    ],
+    "modo_preparo": "Grelhe o tofu em cubos. Salteie os legumes na frigideira com azeite e molho shoyu. Misture tudo.",
+    "tempo_preparo": "20 minutos"
+  },
+  {
+    "nome": "Estrogonofe de Frango com Legumes",
+    "ingredientes": [
+      "frango",
+      "cenoura",
+      "beterraba"
+    ],
+    "modo_preparo": "Refogue o frango em cubos, adicione creme de leite e ketchup. Acrescente cenoura ralada e beterraba cozida em cubos no final.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Carne Suína com Legumes na Panela",
+    "ingredientes": [
+      "carne suína",
+      "batata",
+      "cenoura",
+      "abobrinha"
+    ],
+    "modo_preparo": "Refogue a carne em cubos até dourar. Adicione os legumes picados e um pouco de água. Cozinhe até os ingredientes ficarem macios.",
+    "tempo_preparo": "35 minutos"
+  },
+  {
+    "nome": "Salada Verde com Frango Grelhado",
+    "ingredientes": ["alface", "rúcula", "espinafre", "couve", "agrião", "frango", "azeite", "sal", "pimenta", "limão"],
+    "modo_preparo": "Misture as folhas verdes em uma tigela. Grelhe o frango e corte em tiras. Adicione às folhas e tempere com azeite, sal, pimenta e suco de limão.",
+    "tempo_preparo": "15 minutos"
+  },
+  {
+    "nome": "Sopa de Legumes",
+    "ingredientes": ["cenoura", "batata", "abobrinha", "chuchu", "cebola", "alho", "colorau", "louro"],
+    "modo_preparo": "Refogue alho e cebola, adicione os legumes picados, colorau e louro. Cubra com água e cozinhe até tudo amolecer.",
+    "tempo_preparo": "40 minutos"
+  },
+  {
+    "nome": "Macarrão à Bolonhesa com Carne Bovina",
+    "ingredientes": ["macarrão", "carne bovina", "extrato de tomate", "cebola", "alho", "orégano", "azeite"],
+    "modo_preparo": "Cozinhe o macarrão. Refogue a carne com alho, cebola e azeite. Adicione extrato de tomate e orégano. Sirva com o macarrão.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Arroz com Lentilha e Carne Suína",
+    "ingredientes": ["arroz", "lentilha", "carne suína", "cominho", "pimenta", "sal", "azeite"],
+    "modo_preparo": "Refogue a carne suína com cominho e pimenta. Adicione o arroz e a lentilha cozida. Misture bem e ajuste o sal.",
+    "tempo_preparo": "35 minutos"
+  },
+  {
+    "nome": "Omelete de Espinafre e Queijo",
+    "ingredientes": ["ovo", "espinafre", "queijo", "cebola", "sal", "orégano"],
+    "modo_preparo": "Bata os ovos e misture os ingredientes. Cozinhe em frigideira antiaderente até dourar dos dois lados.",
+    "tempo_preparo": "10 minutos"
+  },
+  {
+    "nome": "Bolinho de Grão-de-Bico com Curry",
+    "ingredientes": ["grão-de-bico", "cebola", "alho", "curry", "cominho", "azeite"],
+    "modo_preparo": "Processe o grão-de-bico com os temperos. Modele bolinhos e asse ou frite até ficarem crocantes.",
+    "tempo_preparo": "25 minutos"
+  },
+  {
+    "nome": "Torrada com Abacate e Ovo Pochê",
+    "ingredientes": ["pão", "abacate", "ovo", "sal", "pimenta", "azeite"],
+    "modo_preparo": "Torre o pão. Amasse o abacate e espalhe sobre a torrada. Coloque o ovo pochê por cima e tempere.",
+    "tempo_preparo": "15 minutos"
+  },
+  {
+    "nome": "Sanduíche de Queijo, Requeijão e Tomate",
+    "ingredientes": ["pão", "queijo", "requeijão", "orégano"],
+    "modo_preparo": "Monte o sanduíche com os ingredientes. Leve à sanduicheira ou grelha até o queijo derreter.",
+    "tempo_preparo": "10 minutos"
+  },
+  {
+    "nome": "Tofu Grelhado com Cogumelos e Brócolis",
+    "ingredientes": ["tofu", "shimeji", "shitake", "champignon", "alho", "molho shoyu", "azeite", "brócolis"],
+    "modo_preparo": "Grelhe o tofu. Refogue os cogumelos e brócolis com alho e shoyu no azeite. Sirva juntos.",
+    "tempo_preparo": "20 minutos"
+  },
+  {
+    "nome": "Mousse de Leite Condensado com Frutas",
+    "ingredientes": ["leite condensado", "creme de leite", "limão", "morango", "manga"],
+    "modo_preparo": "Bata leite condensado com creme de leite e suco de limão. Refrigere e sirva com frutas picadas.",
+    "tempo_preparo": "20 minutos + 2h de geladeira"
+  },
+  {
+    "nome": "Salada de Leguminosas com Vegetais",
+    "ingredientes": ["feijão", "edamame", "ervilha seca", "cenoura", "cebola", "coentro", "azeite", "vinagre"],
+    "modo_preparo": "Cozinhe as leguminosas e misture com os vegetais picados. Tempere com azeite, vinagre e coentro.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Mix de Castanhas e Oleaginosas",
+    "ingredientes": ["amendoim", "castanha de caju", "castanha do Pará", "nozes", "amêndoas"],
+    "modo_preparo": "Misture todas as castanhas em um pote seco e armazene em local fresco.",
+    "tempo_preparo": "5 minutos"
+  },
+  {
+    "nome": "Salada Verde com Frango Grelhado",
+    "ingredientes": ["alface", "rúcula", "espinafre", "couve", "agrião", "frango", "azeite", "sal", "pimenta", "limão"],
+    "modo_preparo": "Misture as folhas com frango grelhado e tempere com azeite, sal, pimenta e suco de limão.",
+    "tempo_preparo": "15 minutos"
+  },
+  {
+    "nome": "Sopa de Legumes",
+    "ingredientes": ["cenoura", "batata", "abobrinha", "chuchu", "cebola", "alho", "colorau", "louro"],
+    "modo_preparo": "Refogue cebola e alho, adicione os legumes em cubos, tempere e cozinhe com água até amolecer.",
+    "tempo_preparo": "40 minutos"
+  },
+  {
+    "nome": "Macarrão à Bolonhesa com Carne Bovina",
+    "ingredientes": ["macarrão", "carne bovina moída", "extrato de tomate", "cebola", "alho", "orégano", "azeite"],
+    "modo_preparo": "Refogue carne com alho e cebola, adicione extrato de tomate, orégano e sirva sobre o macarrão cozido.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Arroz com Lentilha e Carne Suína",
+    "ingredientes": ["arroz", "lentilha", "carne suína", "cominho", "pimenta", "sal", "azeite"],
+    "modo_preparo": "Cozinhe o arroz com lentilha e carne suína refogada. Tempere a gosto.",
+    "tempo_preparo": "35 minutos"
+  },
+  {
+    "nome": "Omelete de Espinafre e Queijo",
+    "ingredientes": ["ovo", "espinafre", "queijo", "cebola", "sal", "orégano"],
+    "modo_preparo": "Bata os ovos com os ingredientes e frite em frigideira antiaderente.",
+    "tempo_preparo": "10 minutos"
+  },
+  {
+    "nome": "Bolinho de Grão-de-Bico com Curry",
+    "ingredientes": ["grão-de-bico", "cebola", "alho", "curry", "cominho", "azeite"],
+    "modo_preparo": "Triture o grão-de-bico com os temperos, modele bolinhos e asse ou frite.",
+    "tempo_preparo": "25 minutos"
+  },
+  {
+    "nome": "Torrada com Abacate e Ovo Pochê",
+    "ingredientes": ["pão", "abacate", "ovo", "sal", "pimenta", "azeite"],
+    "modo_preparo": "Torre o pão, espalhe abacate amassado e finalize com ovo pochê e temperos.",
+    "tempo_preparo": "15 minutos"
+  },
+  {
+    "nome": "Sanduíche de Queijo, Requeijão e Tomate",
+    "ingredientes": ["pão", "queijo", "requeijão", "orégano"],
+    "modo_preparo": "Monte o sanduíche e leve à sanduicheira até derreter.",
+    "tempo_preparo": "10 minutos"
+  },
+  {
+    "nome": "Tofu Grelhado com Cogumelos e Brócolis",
+    "ingredientes": ["tofu", "shimeji", "shitake", "champignon", "alho", "molho shoyu", "azeite"],
+    "modo_preparo": "Grelhe o tofu e refogue os cogumelos com alho e molho shoyu.",
+    "tempo_preparo": "20 minutos"
+  },
+  {
+    "nome": "Mousse de Leite Condensado com Frutas",
+    "ingredientes": ["leite condensado", "creme de leite", "limão", "morango", "manga"],
+    "modo_preparo": "Bata leite condensado, creme de leite e limão. Sirva com frutas picadas.",
+    "tempo_preparo": "20 minutos + 2h de geladeira"
+  },
+  {
+    "nome": "Salada de Leguminosas com Vegetais",
+    "ingredientes": ["feijão", "edamame", "ervilha seca", "cenoura", "cebola", "coentro", "azeite", "vinagre"],
+    "modo_preparo": "Misture as leguminosas cozidas com os vegetais e tempere.",
+    "tempo_preparo": "30 minutos"
+  },
+  {
+    "nome": "Mix de Castanhas e Oleaginosas",
+    "ingredientes": ["amendoim", "castanha de caju", "castanha do Pará", "nozes", "amêndoas"],
+    "modo_preparo": "Misture todas e sirva como lanche saudável.",
+    "tempo_preparo": "5 minutos"
+  }
+]
+
+

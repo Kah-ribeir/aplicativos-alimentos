@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minhas Receitas Favoritas</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .receita {
+      border: 1px solid #E74C3C;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      background-color: #E74C3C;
+    }
+
+    .remover-btn {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .voltar {
+      margin-bottom: 20px;
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #E74C3C;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="voltar" href="filtro.html">← Voltar</a>
+    <h2>Minhas Receitas Favoritas</h2>
+    <div id="favoritos"></div>
+  </div>
+
+  <script>
+    const container = document.getElementById('favoritos');
+    const favoritas = JSON.parse(localStorage.getItem('receitasFavoritas')) || [];
+
+    if (favoritas.length === 0) {
+      container.innerHTML = '<p>Você ainda não salvou nenhuma receita como favorita.</p>';
+    } else {
+      favoritas.forEach((receita, index) => {
+        const div = document.createElement('div');
+        div.className = 'receita';
+        div.innerHTML = `
+          <h3>${receita.nome}</h3>
+          <p><strong>Ingredientes:</strong> ${receita.ingredientes.join(', ')}</p>
+          <p><strong>Modo de Preparo:</strong> ${receita.modo_preparo}</p>
+          <p><strong>Tempo de Preparo:</strong> ${receita.tempo_preparo}</p>
+          <button class="remover-btn" onclick="removerFavorita(${index})">Remover dos favoritos</button>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function removerFavorita(indice) {
+      favoritas.splice(indice, 1);
+      localStorage.setItem('receitasFavoritas', JSON.stringify(favoritas));
+      location.reload(); // Atualiza a lista
+    }
+  </script>
+</body>
+</html>

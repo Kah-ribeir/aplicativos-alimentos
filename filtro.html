@@ -7,113 +7,251 @@
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      background-color: #fdf2e9;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    fieldset {
+      border: 2px solid #ffa07a;
+      border-radius: 8px;
+      padding: 15px;
+      background-color: #fffaf0;
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #d35400;
+    }
+
     select {
       width: 100%;
-      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #ff914d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e67300;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <h2>O que você tem na sua geladeira?</h2>
   <form id="formIngredientes">
-    
-    <fieldset>
-      <legend>Verduras</legend>
-      <select id="verduras" name="verduras" multiple size="5">
-        <option value="alface">Alface</option>
-        <option value="rúcula">Rúcula</option>
-        <option value="espinafre">Espinafre</option>
-        <option value="couve">Couve</option>
-        <option value="agrião">Agrião</option>
-      </select>
-    </fieldset>
+    <div class="grid">
+      <fieldset>
+        <legend>🥬 Verduras</legend>
+        <select id="verduras" name="verduras" multiple size="5">
+          <option value="alface">Alface</option>
+          <option value="rúcula">Rúcula</option>
+          <option value="espinafre">Espinafre</option>
+          <option value="couve">Couve</option>
+          <option value="agrião">Agrião</option>
+        </select>
+      </fieldset>
 
-    <fieldset>
-      <legend>Legumes</legend>
-      <select id="legumes" name="legumes" multiple size="6">
-        <option value="cenoura">Cenoura</option>
-        <option value="batata">Batata</option>
-        <option value="abobrinha">Abobrinha</option>
-        <option value="berinjela">Berinjela</option>
-        <option value="beterraba">Beterraba</option>
-        <option value="chuchu">Chuchu</option>
-      </select>
-    </fieldset>
+      <fieldset>
+        <legend>🥕 Legumes</legend>
+        <select id="legumes" name="legumes" multiple size="6">
+          <option value="cenoura">Cenoura</option>
+          <option value="batata">Batata</option>
+          <option value="abobrinha">Abobrinha</option>
+          <option value="berinjela">Berinjela</option>
+          <option value="beterraba">Beterraba</option>
+          <option value="chuchu">Chuchu</option>
+        </select>
+      </fieldset>
 
-    <fieldset>
-      <legend>Carnes e Proteínas</legend>
-      <select id="carnes" name="carnes" multiple size="6">
-        <option value="frango">Frango</option>
-        <option value="carne bovina">Carne bovina</option>
-        <option value="carne suína">Carne suína</option>
-        <option value="ovo">Ovo</option>
-        <option value="tofu">Tofu</option>
-        <option value="peixe">Peixe</option>
-      </select>
-    </fieldset>
+      <fieldset>
+        <legend>🍖 Carnes e Proteínas</legend>
+        <select id="carnes" name="carnes" multiple size="6">
+          <option value="frango">Frango</option>
+          <option value="carne bovina">Carne bovina</option>
+          <option value="carne suína">Carne suína</option>
+          <option value="ovo">Ovo</option>
+          <option value="tofu">Tofu</option>
+          <option value="peixe">Peixe</option>
+        </select>
+      </fieldset>
 
-    <fieldset>
-      <legend>Cereais e Farináceos</legend>
-      <select id="cereais" name="cereais" multiple size="6">
-        <option value="arroz">Arroz</option>
-        <option value="macarrão">Macarrão</option>
-        <option value="farinha de trigo">Farinha de trigo</option>
-        <option value="aveia">Aveia</option>
-        <option value="pão">Pão</option>
-        <option value="milho">Milho</option>
-      </select>
-    </fieldset>
+      <fieldset>
+        <legend>🌾 Cereais e Farináceos</legend>
+        <select id="cereais" name="cereais" multiple size="6">
+          <option value="arroz">Arroz</option>
+          <option value="macarrão">Macarrão</option>
+          <option value="farinha de trigo">Farinha de trigo</option>
+          <option value="aveia">Aveia</option>
+          <option value="pão">Pão</option>
+          <option value="milho">Milho</option>
+        </select>
+      </fieldset>
 
-    <fieldset>
-      <legend>Laticínios e Derivados</legend>
-      <select id="laticinios" name="laticinios" multiple size="5">
-        <option value="leite">Leite</option>
-        <option value="queijo">Queijo</option>
-        <option value="manteiga">Manteiga</option>
-        <option value="requeijão">Requeijão</option>
-        <option value="iogurte">Iogurte</option>
-      </select>
-    </fieldset>
+      <fieldset>
+        <legend>🧀 Laticínios e Derivados</legend>
+        <select id="laticinios" name="laticinios" multiple size="5">
+          <option value="leite">Leite</option>
+          <option value="queijo">Queijo</option>
+          <option value="manteiga">Manteiga</option>
+          <option value="requeijão">Requeijão</option>
+          <option value="iogurte">Iogurte</option>
+        </select>
+      </fieldset>
 
-    <fieldset>
-      <legend>Temperos e Especiarias</legend>
-      <select id="temperos" name="temperos" multiple size="8">
-        <option value="sal">Sal</option>
-        <option value="pimenta">Pimenta</option>
-        <option value="alho">Alho</option>
-        <option value="cebola">Cebola</option>
-        <option value="orégano">Orégano</option>
-        <option value="salsinha">Salsinha</option>
-        <option value="coentro">Coentro</option>
-        <option value="colorau">Colorau</option>
-      </select>
-    </fieldset>
+      <fieldset>
+        <legend>🧂 Temperos e Especiarias</legend>
+        <select id="temperos" name="temperos" multiple size="8">
+          <option value="sal">Sal</option>
+          <option value="pimenta">Pimenta</option>
+          <option value="alho">Alho</option>
+          <option value="cebola">Cebola</option>
+          <option value="orégano">Orégano</option>
+          <option value="salsinha">Salsinha</option>
+          <option value="coentro">Coentro</option>
+          <option value="colorau">Colorau</option>
+        </select>
+      </fieldset>
 
-    <fieldset>
-      <legend>Outros Itens</legend>
-      <select id="outros" name="outros" multiple size="7">
-        <option value="azeite">Azeite</option>
-        <option value="óleo">Óleo</option>
-        <option value="vinagre">Vinagre</option>
-        <option value="extrato de tomate">Extrato de tomate</option>
-        <option value="molho shoyu">Molho Shoyu</option>
-        <option value="leite condensado">Leite condensado</option>
-        <option value="creme de leite">Creme de leite</option>
-      </select>
-    </fieldset>
+      <fieldset>
+        <legend>📦 Outros Itens</legend>
+        <select id="outros" name="outros" multiple size="7">
+          <option value="azeite">Azeite</option>
+          <option value="óleo">Óleo</option>
+          <option value="vinagre">Vinagre</option>
+          <option value="extrato de tomate">Extrato de tomate</option>
+          <option value="molho shoyu">Molho Shoyu</option>
+          <option value="leite condensado">Leite condensado</option>
+          <option value="creme de leite">Creme de leite</option>
+        </select>
+      </fieldset>
+
+      <!-- Novos grupos adicionados com emojis -->
+      <fieldset>
+        <legend>🍎 Frutas</legend>
+        <select id="frutas" name="frutas" multiple size="8">
+          <option value="maçã">Maçã</option>
+          <option value="banana">Banana</option>
+          <option value="laranja">Laranja</option>
+          <option value="mamão">Mamão</option>
+          <option value="abacate">Abacate</option>
+          <option value="limão">Limão</option>
+          <option value="manga">Manga</option>
+          <option value="morango">Morango</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>🌱 Leguminosas</legend>
+        <select id="leguminosas" name="leguminosas" multiple size="6">
+          <option value="feijão">Feijão</option>
+          <option value="grão-de-bico">Grão-de-bico</option>
+          <option value="lentilha">Lentilha</option>
+          <option value="ervilha seca">Ervilha seca</option>
+          <option value="soja">Soja</option>
+          <option value="edamame">Edamame</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>🌿 Temperos Naturais</legend>
+        <select id="temperos_naturais" name="temperos_naturais" multiple size="6">
+          <option value="manjericão">Manjericão</option>
+          <option value="alecrim">Alecrim</option>
+          <option value="louro">Louro</option>
+          <option value="cominho">Cominho</option>
+          <option value="curry">Curry</option>
+          <option value="páprica">Páprica</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>🍄 Cogumelos e Enlatados</legend>
+        <select id="cogumelos_enlatados" name="cogumelos_enlatados" multiple size="6">
+          <option value="champignon">Champignon</option>
+          <option value="shitake">Shitake</option>
+          <option value="shimeji">Shimeji</option>
+          <option value="milho enlatado">Milho enlatado</option>
+          <option value="ervilha enlatada">Ervilha enlatada</option>
+          <option value="atum enlatado">Atum enlatado</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>🌰 Oleaginosas</legend>
+        <select id="oleaginosas" name="oleaginosas" multiple size="5">
+          <option value="amendoim">Amendoim</option>
+          <option value="castanha de caju">Castanha de caju</option>
+          <option value="castanha do pará">Castanha do Pará</option>
+          <option value="nozes">Nozes</option>
+          <option value="amêndoas">Amêndoas</option>
+        </select>
+      </fieldset>
+    </div>
 
     <br />
     <button type="submit">Buscar receitas</button>
   </form>
+
+
+  <div class="user-icon" onclick="abrirConta()">👤</div>
+
+<div id="contaUsuario" class="painel-conta">
+  <button class="fechar-conta" onclick="fecharConta()">×</button>
+  <h3>Minha Conta</h3>
+  <p><strong>Nome:</strong> <span id="nomeConta"></span></p>
+  <p><strong>Email:</strong> <span id="emailConta"></span></p>
+  <hr>
+  <ul>
+    <li><a href="#">Minhas receitas</a></li>
+    <li><a href="favoritos.html">Favoritos</a></li>
+    <li><a href="#" onclick="logout()">Sair</a></li>
+  </ul>
+</div>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('#legumes, #verduras, #carnes, #cereais, #laticinios, #temperos, #outros').select2({
+      $('#legumes, #verduras, #carnes, #cereais, #laticinios, #temperos, #outros, #frutas, #leguminosas, #temperos_naturais, #cogumelos_enlatados, #oleaginosas').select2({
         width: '100%',
-        placeholder: 'Selecione'
+        placeholder: 'Selecione seus alimentos'
       });
 
       $('#formIngredientes').on('submit', function (e) {
@@ -126,14 +264,57 @@
         const laticinios = $('#laticinios').val() || [];
         const temperos = $('#temperos').val() || [];
         const outros = $('#outros').val() || [];
+        const frutas = $('#frutas').val() || [];
+        const leguminosas = $('#leguminosas').val() || [];
+        const temperosNaturais = $('#temperos_naturais').val() || [];
+        const cogumelosEnlatados = $('#cogumelos_enlatados').val() || [];
+        const oleaginosas = $('#oleaginosas').val() || [];
 
-        const selecionados = [...legumes, ...verduras, ...carnes, ...cereais, ...laticinios, ...temperos, ...outros];
+        const selecionados = [
+          ...legumes,
+          ...verduras,
+          ...carnes,
+          ...cereais,
+          ...laticinios,
+          ...temperos,
+          ...outros,
+          ...frutas,
+          ...leguminosas,
+          ...temperosNaturais,
+          ...cogumelosEnlatados,
+          ...oleaginosas
+        ];
 
         localStorage.setItem('ingredientesSelecionados', JSON.stringify(selecionados));
 
         window.location.href = 'receitas.html';
       });
     });
+    function abrirConta() {
+  document.getElementById('contaUsuario').classList.add('aberto');
+
+  // Preenche os dados do usuário
+  const nome = localStorage.getItem('usuario_nome') || 'Usuário';
+  const email = localStorage.getItem('usuario_email') || 'sem@email.com';
+
+  document.getElementById('nomeConta').innerText = nome;
+  document.getElementById('emailConta').innerText = email;
+}
+
+function fecharConta() {
+  document.getElementById('contaUsuario').classList.remove('aberto');
+}
+
+function logout() {
+  localStorage.removeItem('usuario_nome');
+  localStorage.removeItem('usuario_email');
+  alert('Você saiu da conta.');
+  location.reload(); // Atualiza a página
+}
+
   </script>
+  
+
 </body>
 </html>
+

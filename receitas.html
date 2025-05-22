@@ -1,15 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Receitas com Ingredientes</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <style>
-    .receita h3 {
-      margin-top: 0;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FDF2E9;
+      color: #333;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #E67300;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    #ingredientes {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .botao {
+      background-color: #E67300;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .botao:hover {
+      background-color: #E67300;
+    }
+
     .mensagem {
       font-style: italic;
       color: #777;
@@ -18,11 +72,31 @@
       justify-content: space-around;
       flex-wrap: wrap;
     }
+
+    .receita {
+      border: 1px solid #E67300;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+      background-color: ;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .receita h3 {
+      margin-top: 0;
+      color: #E67300;
+    }
+
+    .receita p {
+      margin: 6px 0;
+      line-height: 1.5;
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
-   <button class="botao"><a href="filtro.html">Voltar</a></button>
+    <button class="botao"><a href="filtro.html">Voltar</a></button>
     <h2 id="titulo"></h2>
 
     <label for="ingredientes">Escolha entre os ingredientes selecionados:</label>
@@ -33,6 +107,7 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 
   <script>
     const nome = localStorage.getItem('usuario_nome') || 'Usuário';
@@ -81,12 +156,24 @@
           filtradas.forEach(receita => {
             const card = document.createElement('div');
             card.className = 'receita';
+            const isFavorita = verificarFavorita(receita.nome);
+
             card.innerHTML = `
-              <h3>${receita.nome}</h3>
-              <p><strong>Ingredientes:</strong> ${receita.ingredientes.join(', ')}</p>
-              <p><strong>Modo de Preparo:</strong> ${receita.modo_preparo}</p>
-              <p><strong>Tempo de Preparo:</strong> ${receita.tempo_preparo}</p>
-            `;
+  <h3>${receita.nome}</h3>
+  <p><strong>Ingredientes:</strong> ${receita.ingredientes.join(', ')}</p>
+  <p><strong>Modo de Preparo:</strong> ${receita.modo_preparo}</p>
+  <p><strong>Tempo de Preparo:</strong> ${receita.tempo_preparo}</p>
+  <button class="favorita-btn" data-receita='${JSON.stringify(receita)}'>
+    ${isFavorita ? 'Salva ✅' : 'Salvar como favorita'}
+  </button>
+`;
+const btn = card.querySelector('.favorita-btn');
+btn.addEventListener('click', () => {
+  const receita = JSON.parse(btn.dataset.receita);
+  salvarComoFavorita(receita);
+});
+
+
             resultadoDiv.appendChild(card);
           });
         });
@@ -97,6 +184,25 @@
 
     // Exibe a mensagem inicial
     filtrarReceitas();
+
+    function salvarComoFavorita(receita) {
+  const favoritas = JSON.parse(localStorage.getItem('receitasFavoritas')) || [];
+  const existe = favoritas.find(r => r.nome === receita.nome);
+
+  if (!existe) {
+    favoritas.push(receita);
+    localStorage.setItem('receitasFavoritas', JSON.stringify(favoritas));
+    alert(`Receita "${receita.nome}" salva como favorita!`);
+    filtrarReceitas(); // Atualiza os botões
+  }
+}
+
+function verificarFavorita(nome) {
+  const favoritas = JSON.parse(localStorage.getItem('receitasFavoritas')) || [];
+  return favoritas.some(r => r.nome === nome);
+}
+
   </script>
 </body>
+
 </html>
