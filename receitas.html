@@ -124,13 +124,13 @@
       selectIngredientes.append(option);
     });
 
-    // Inicializa Select2
+  
     selectIngredientes.select2({
       placeholder: 'Selecione os ingredientes',
       width: '100%'
     });
 
-    // Função para carregar e filtrar receitas
+    
     function filtrarReceitas() {
       const selecionados = selectIngredientes.val();
 
@@ -179,10 +179,10 @@
         });
     }
 
-    // Atualiza dinamicamente ao selecionar ingredientes
+    
     selectIngredientes.on('change', filtrarReceitas);
 
-    // Exibe a mensagem inicial
+   
     filtrarReceitas();
 
     function salvarComoFavorita(receita) {
@@ -193,7 +193,7 @@
         favoritas.push(receita);
         localStorage.setItem('receitasFavoritas', JSON.stringify(favoritas));
         alert(`Receita "${receita.nome}" salva como favorita!`);
-        filtrarReceitas(); // Atualiza os botões
+        filtrarReceitas(); 
       }
     }
 
