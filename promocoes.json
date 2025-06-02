@@ -1,0 +1,18 @@
+[
+  {
+    "produto": "Arroz Tio João 5kg",
+    "preco_antigo": 25.90,
+    "preco_atual": 19.90,
+    "imagem": "arroz.jpg",
+    "mercado": "Mercado Bom Preço",
+    "validade": "2025-06-05"
+  },
+  {
+    "produto": "Coca-Cola 2L",
+    "preco_antigo": 8.50,
+    "preco_atual": 6.99,
+    "imagem": "coca.jpg",
+    "mercado": "Supermercado Central",
+    "validade": "2025-06-03"
+  }
+]

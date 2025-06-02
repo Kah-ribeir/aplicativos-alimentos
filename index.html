@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <link rel="stylesheet" href="style.css" />
-  
+    <link rel="stylesheet" href="style.css" />
+
 
 </head>
+
 <body>
-      <div id="splash">
+    <div id="splash">
         <img src="img/ChatGPT Image 22 de mai. de 2025, 07_32_35.png" alt="il mio grado">
     </div>
     <div class="foradoformulario">
-        <div id="formulario">
+        <div id="formularioindex">
             <h1>LOGIN</h1>
-            <form id="form-nome">
+            <form id="form-nomeindex" action="filtro.html">
 
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" required><br><br>
 
-                   <label for="nome">Senha</label><br>
+                <label for="nome">Senha</label><br>
                 <input type="password" id="senha" name="senha" required><br><br>
 
                 <button type="submit"> Enviar</button>
-                <a href="cadastro.html"> Cadastre agora</a>
+  <a href="cadastro.html"> Cadastre agora</a>
             </form>
-        </div>
+        </div><br><br>
+      
     </div>
+    
     <script>
         setTimeout(() => {
             document.getElementById('splash').style.display = 'none';
@@ -39,12 +43,13 @@
             .getElementById("form-nome")
             .addEventListener("submit", function (e) {
                 e.preventDefault();
-                const nome = document.getElementById("nome").value.trim();
-                if (nome) {
-                    localStorage.setItem("usuario_nome", nome);
+                const email = document.getElementById("email").value.trim();
+                if (email) {
+                    localStorage.setItem("email", email);
                     window.location.href = "filtro.html";
                 }
             });
     </script>
 </body>
+
 </html>

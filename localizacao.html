@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercados Próximos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #FCF0D5;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #D35400;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .resultado {
+      max-width: 600px;
+      margin: 0 auto;
+      background:#FCF0D5 ;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #FCF0D5;
+    }
+
+    strong {
+      color: #D35400;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Encontre o Mercado Mais Próximo</h1>
+<button onclick="getLocation()">Mostrar Mercado Mais Próximo</button>
+
+<div class="resultado">
+  <p id="local">Clique no botão para ver qual mercado está mais perto de você.</p>
+</div>
+
+<button class="botao"><a href="filtro.html">Voltar</a></button>
+
+<script>
+const mercados = [
+  { 
+    nome: "Supermercados Avenida - LOJA 10", 
+    endereco: "Av. Brasil, 951 - Paraguaçu Paulista/SP", 
+    lat:  -22.418668693626742, 
+    lon: -50.574400596313076 
+  },
+  { 
+    nome: "Supermercados Compre Center", 
+    endereco: "Av. Siqueira Campos, 698 - Paraguaçu Paulista/SP", 
+    lat:  -22.415789696257512,
+    lon:  -50.57773466549451
+  },
+  { 
+    nome: "Supermercado Continente", 
+    endereco: "Av. Sete de Setembro, 2431 - Paraguaçu Paulista/SP", 
+    lat:  -22.42379478956753, 
+    lon: -50.57959949701837
+  },
+  { 
+    nome: "Mercado Peg Pag Lima", 
+    endereco: "Av. Sete de Setembro, 1659 - Paraguaçu Paulista/SP", 
+    lat:  -22.423776726937948,
+    lon: - -50.579613099192045
+  },
+  { 
+    nome: "Supermercado Bandeirante", 
+    endereco: "Av. Brasil, 396 - Paraguaçu Paulista/SP", 
+    lat:  -22.413565539232533, 
+    lon: -50.57320139952462
+  },
+  { 
+    nome: "Supermercado Tá Barato - Fercon", 
+    endereco: "R. Ver. Jose Ricardo Pellizzer, 80 - Paraguaçu Paulista/SP", 
+    lat:  -22.424023115938454,
+    lon:  -50.5793299175499
+  },
+  { 
+    nome: "Mercadinho Vila Nova", 
+    endereco: "R. Faustino Dias Paião, 199 - Paraguaçu Paulista/SP", 
+    lat:  -22.422451952029355,
+    lon:  -50.586710622169754
+  },
+  { 
+    nome: "Mercado Kawakami", 
+    endereco: "R. Pref. José Deliberador, 323 - Vila Thaide - Paraguaçu Paulista/SP", 
+    lat:  -22.424440843867394,
+    lon:  -50.57505114555712
+  }
+];
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showClosestMarket, showError);
+  } else {
+    document.getElementById("local").innerHTML = "Geolocalização não suportada.";
+  }
+}
+
+function showClosestMarket(position) {
+  const userLat = position.coords.latitude;
+  const userLon = position.coords.longitude;
+
+  console.log(userLat);
+  console.log(userLon);
+
+  let closest = null;
+  let minDist = Infinity;
+
+  mercados.forEach(mercado => {
+    const dist = calcDist(userLat, userLon, mercado.lat, mercado.lon);
+
+    if (dist < minDist) {
+      minDist = dist;
+      closest = mercado;
+    }
+  });
+
+  document.getElementById("local").innerHTML = `
+    <h3>Mercado mais próximo:</h3>
+    <ul>
+      <li><strong>${closest.nome}</strong><br>${closest.endereco}</li>
+    </ul>
+    <p><strong>Sua localização:</strong><br>
+    Latitude: ${userLat.toFixed(5)}, Longitude: ${userLon.toFixed(5)}</p>
+  `;
+}
+
+// Cálculo da distância (aproximado)
+function calcDist(lat1, lon1, lat2, lon2) {
+  return Math.sqrt(Math.pow(lat1 - lat2, 2) + Math.pow(lon1 - lon2, 2));
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      document.getElementById("local").innerHTML = "Permissão negada para acessar sua localização.";
+      break;
+    case error.POSITION_UNAVAILABLE:
+      document.getElementById("local").innerHTML = "Informação de localização indisponível.";
+      break;
+    case error.TIMEOUT:
+      document.getElementById("local").innerHTML = "Tempo esgotado para obter localização.";
+      break;
+    case error.UNKNOWN_ERROR:
+      document.getElementById("local").innerHTML = "Erro desconhecido.";
+      break;
+  }
+}
+</script>
+
+</body>
+</html>
