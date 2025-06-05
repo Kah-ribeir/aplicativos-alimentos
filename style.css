@@ -300,5 +300,15 @@ a:hover {
   #form-nome{
     display: flex;
     flex-direction: column;
+    
   }
+  h2{
+    font-size: 20px;
+  }
+
+.user-icon {
+    position: fixed;
+    top: 53px;
+    right: 20px;
+}
 }
