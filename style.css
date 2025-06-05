@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
@@ -225,49 +223,82 @@ button:hover {
 
 .texto {
   text-align: center;
-  font-family:"Bebas Neue", sans-serif;;
+  font-family: "Bebas Neue", sans-serif;
+  ;
   justify-items: center;
   align-items: center;
 }
 
-.item1{
-    display: flex;
-    
-    padding: 20px 30px;
-    justify-content: space-between;
-    text-align: center;
-    flex-direction: column;
-    width: 50%;
-    align-items: center;
+.item1 {
+  display: flex;
+
+  padding: 20px 30px;
+  justify-content: space-between;
+  text-align: center;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
 }
 
-.item1 .img-comida{
-    width: 300px;
-    
+.item1 .img-comida {
+  width: 300px;
+
 }
-.separacao{
+
+.separacao {
   display: flex;
   flex-wrap: wrap;
 }
 
-.produto{
-   border: #D35400 1px solid;
- border-radius: 20px;
+.produto {
+  border: #D35400 1px solid;
+  border-radius: 20px;
 }
-.promo{
+
+.promo {
   text-align: center;
   justify-content: center;
   font-family: "Bebas Neue", sans-serif;
   font-size: 90px;
   color: #D35400;
 }
-.botao{
+
+.botao {
   margin-left: 50%;
 }
 
-.botao a{
+.botao a {
   color: white;
   text-decoration: none;
 }
+
 a:hover {
-  color:#D35400; 
+  color: #D35400;
+}
+
+@media screen and (max-width: 600px) {
+
+  .separacao {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item1 .img-comida {
+  width: 100px;
+  }
+  .promo {
+   
+    font-size: 50px;
+  }
+  .botao{
+    margin-left:40%
+  }
+  #formulario{
+    display: flex;
+    flex-direction: column;
+  }
+  #form-nome{
+    display: flex;
+    flex-direction: column;
+  }
+}
