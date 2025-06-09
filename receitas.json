@@ -532,12 +532,6 @@
     "ingredientes": ["feijão", "edamame", "ervilha seca", "cenoura", "cebola", "coentro", "azeite", "vinagre"],
     "modo_preparo": "Misture as leguminosas cozidas com os vegetais e tempere.",
     "tempo_preparo": "30 minutos"
-  },
-  {
-    "nome": "Mix de Castanhas e Oleaginosas",
-    "ingredientes": ["amendoim", "castanha de caju", "castanha do Pará", "nozes", "amêndoas"],
-    "modo_preparo": "Misture todas e sirva como lanche saudável.",
-    "tempo_preparo": "5 minutos"
   }
 ]
 
